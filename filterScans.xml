@@ -1,0 +1,19 @@
+<tool id="filterScans" name="filterScans" version="1.0.0">
+<!--  <description>queries genbank</description> -->
+  <command interpreter="python">filterScans.py $spectrumfile $psmreportfile $output ${spectrumfile.name.rsplit('.',1)[0]}</command>
+  <inputs>
+    <param name="spectrumfile" type="data" format="mzml">
+      <label>Input mzML File</label>
+    </param>
+	<param name="psmreportfile" type="data" format="tabular">
+      <label>Input PSM Report File</label>
+    </param>
+  </inputs>
+  <outputs>
+    <data format="mzml" name="output" label="${spectrumfile.name.rsplit('.',1)[0]}.mzml" />
+  </outputs>
+  <help>
+Testing to run filterScan script in Galaxy
+  </help>
+
+</tool>
